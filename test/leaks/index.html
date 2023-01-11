@@ -9,17 +9,36 @@
 	<button id="alloc">Alloc</button>
 	<button id="dealloc">Dealloc</button>
 
+
+
+	<div class="foo" id="foo">
+		<span class="" id="">
+			<button id="dealloc1">Dealloc</button>
+			<button id="dealloc2">Dealloc</button>
+			<button id="dealloc3">Dealloc</button>
+			<button id="dealloc4">Dealloc</button>
+			<button id="dealloc5">Dealloc</button>
+		</span>
+
+	</div>
+
+<!-- this is a test-->
+<!--this is a test 2-->
+
 	<script src="/static/vs/loader.js"></script>
 	<script>
 		require.config({ baseUrl: '/static' });
+
 
 		require(['vs/base/browser/event'], ({ domEvent }) => {
 			let event;
 			let listener;
 
 			function alloc() {
+			//
 				event = domEvent(document.body, 'mousemove');
 				listener = event(e => console.log(e));
+
 			}
 
 			function dealloc() {

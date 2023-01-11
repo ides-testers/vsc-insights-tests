@@ -23,6 +23,7 @@
 }(this, function () {
 	const bootstrapLib = bootstrap();
 	const preloadGlobals = sandboxGlobals();
+	
 	const safeProcess = preloadGlobals.process;
 
 	/**
